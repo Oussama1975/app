@@ -32,9 +32,9 @@ export const getStudent = async (request, response) => {
 // * Delete student :
 export const deleteStudents = async (request, response) => {
   try {
-    const age = request.params.age;
-    await deleteStudentsById(age);
-    response.send(`student with id ${age} has been deleted.... `);
+    const id = request.params.id;
+    await deleteStudentsById(id);
+    response.send(`student with id ${id} has been deleted.... `);
   } catch (err) {
     response.send(err);
   }
@@ -49,7 +49,7 @@ export const createStudents = async (request, response) => {
     if (studentobj) {
       response.send(studentobj);
     } else {
-      response.send("Student already exists with the same age");
+      response.send("Student already exists with the same id");
     }
   } catch (err) {
     response.send(err);

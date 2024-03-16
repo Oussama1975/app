@@ -11,7 +11,7 @@ router.get("/", getStudents);
 router.get("/:id", getStudent);
 
 // * Delete student :
-router.delete("/delete/:age", deleteStudents);
+router.delete("/delete/:id", deleteStudents);
 
 // * Add student :
 router.post("/create",  createStudents);
